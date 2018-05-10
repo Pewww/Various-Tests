@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            input {
+                display: none;
+            }
+            
+            input[type=checkbox] + .test {
+                width:20px;
+                height:20px;
+                border:1px solid;
+                display:block;
+            }
+            
+            input[type=checkbox]:checked + .test {
+                background-color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <label for= "idValue">
+            <input type="checkbox" id= "idValue">
+            <span class="test"></span>
+            <span>Click-Here</span>
+        </label>
+    </body>
+</html>

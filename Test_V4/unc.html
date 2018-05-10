@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function sad() {
+                this.stop = function() {
+                    alert("d");
+                }
+                return true;
+            }
+            function beAwesome(trial) {
+                alert(trial + "만큼 값진 성장을 할거야!");
+            }
+
+            if(sad() === true) {
+                sad.stop();
+                beAwesome(50);
+            }
+        </script>
+    </body>
+</html>

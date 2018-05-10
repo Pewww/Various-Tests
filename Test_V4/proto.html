@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var Person = function(x) {
+                if(x) {
+                    this.fullName = x;
+                }
+            };
+
+            Person.prototype.changeProto = function() {
+                return this.fullName;
+            }
+
+            var cody = new Person('Caden');
+            var lisa = new Person('Lely');
+
+            console.log(cody.changeProto(), lisa.changeProto());
+
+            Object.prototype.lastChain = function() {
+                return 'Hello';
+            }
+
+            // 프로토타입 체인으로 인한 결과
+            console.log(cody.lastChain());
+        </script>
+    </body>
+</html>

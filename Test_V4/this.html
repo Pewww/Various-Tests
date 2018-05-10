@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var myObj = {};
+            var myObj2 = {};
+            var myObj3 = new Object();
+
+            console.log(myObj3);
+
+            var myFunc = function(param1, param2) {
+                this.foo = param1;
+                this.bar = param2;
+                console.log(this);
+            }
+
+            myFunc.call(myObj, 'foo', 'roo');
+            myFunc.apply(myObj2, ['foo', 'bar']);
+
+            console.log(myObj);
+            console.log(myObj2);
+        </script>
+    </body>
+</html>

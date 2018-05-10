@@ -1,0 +1,16 @@
+<html>
+    <script>
+        let set = new Set();
+        set.add('Hello');
+        set.add('Name');
+
+        console.log(set.has('Hello'));
+
+        let arr = [1, 2, 3, 4, 5];
+        for(val of arr) {
+            set.add(val);
+        }
+
+        console.log(set);
+    </script>
+</html>

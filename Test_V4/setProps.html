@@ -1,0 +1,26 @@
+<html><body>
+    <script>
+        const healthObj = {
+            showHealth () {
+                console.log("오늘 운동 시간", this.healthTime);
+            }
+        }
+
+        const myHealth = {
+            name: 'crong',
+            lastTime: '11:20',
+            healthTime: 5
+        }
+
+        const result1 = Object.setPrototypeOf(myHealth, healthObj);
+        const result2 = Object.assign(myHealth, healthObj);
+
+        console.log(result1);
+        console.log(result2);
+
+        result1.showHealth();
+        result2.showHealth();
+
+        // window.runnerWindow.proxyConsole.log("Hello");
+    </script>
+</body></html>

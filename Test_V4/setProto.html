@@ -1,0 +1,32 @@
+<html><body>
+    <script>
+        const healthObj = {
+            showHealth () {
+                console.log("오늘 운동 시간" + this.healthTime);
+            },
+            setHealth (newTime) {
+                this.healthTime = newTime;
+            } 
+        }
+
+        const healthChildObj = {
+            getAge () {
+                return this.age;
+            }
+        }
+
+        Object.setPrototypeOf(
+            healthChildObj,
+            healthObj
+        );
+
+        const childObj = Object.setPrototypeOf({
+            age: 20
+        }, healthChildObj );
+
+        childObj.setHealth('11:55');
+        childObj.showHealth();
+
+        console.log(childObj);
+    </script>
+</body></html>

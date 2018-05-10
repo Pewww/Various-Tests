@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <ul>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Emphasize</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Rain</li>
+            <li>east</li>
+        </ul>
+
+        <script>
+            function check() {
+                let li = document.querySelectorAll('ul > li');
+                let newArr = Array.from(li).filter((val, index) => {
+                    console.log(index);
+                    return val.innerText.includes('e');
+                });
+
+                return newArr;
+            }
+
+            console.log(check());
+        </script>
+    </body>
+</html>

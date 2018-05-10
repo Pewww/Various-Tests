@@ -1,0 +1,61 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            window.foo = 'foo';
+            window.myObj = {
+                foo: 'I am myObject.foo'
+            };
+
+            window.sayFoo = function() {
+                console.log(this['foo']);
+            }
+
+            window.sayFoo();
+            window.myObj.sayFoo = window.sayFoo;
+            window.myObj.sayFoo();
+
+
+            let x = 'global';
+
+            function fooo() {
+                let x = 'local';
+                bar();
+            }
+
+            function bar() {
+                console.log(x);
+            }
+
+            fooo();
+            bar();
+
+            var color = 'red';
+            function roo() {
+                var color = 'blue';
+                function rii() {
+                    console.log(color);
+                }
+                return rii;
+            }
+
+            var baz = roo();
+            baz(); // blue 출력
+
+
+            var myObj = {
+                myPro: 'I can see the light',
+                myMet: function() {
+                    var self = this;
+                    var helpFunc = function() {
+                        console.log(self.myPro);
+                        console.log(this);
+                    }();
+                }
+            }
+            myObj.myMet();
+
+            
+        </script>
+    </body>
+</html>

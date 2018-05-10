@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            let arr = [];
+            for(let i = 0; i < 1000; i++) {
+                arr.push(Math.floor(Math.random() * 10000)) + 1;
+            }
+            let max = 0;
+            for(val of arr) {
+                if(val > max) {
+                    max = val;
+                }
+            }
+
+            console.log(max);
+
+            let newArr = [];
+
+            for(val of arr) {
+                if(val < max) {
+                    newArr.push(val);
+                }
+            }
+
+            console.log(newArr);
+
+            let secondMax = 0;
+
+            for(val of newArr) {
+                if(val > secondMax) {
+                    secondMax = val;
+                }
+            }
+
+            console.log('두 번째로 큰 값: ' + secondMax);
+        </script>
+    </body>
+</html>

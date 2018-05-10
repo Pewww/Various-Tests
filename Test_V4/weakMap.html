@@ -1,0 +1,17 @@
+<html><body>
+    <script>
+        const wm = new WeakMap();
+
+        function Area(width, height) {
+            wm.set(this, {width, height});
+        }
+
+        Area.prototype.getArea = function () {
+            const {width, height} = wm.get(this);
+            return width * height;
+        }
+
+        let area = new Area(15, 20);
+        console.log(area.getArea());
+    </script>
+</body></html>

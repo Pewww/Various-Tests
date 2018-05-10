@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>:: TEST ::</title>
+</head>
+
+<body>
+    <input type="text" id="col" placeholder="Column">
+    <input type="text" id="row" placeholder="Row">
+    <input type="button" value="Start" onclick="spiral()">
+    <script type="text/javascript">
+        function spiral() {
+            var col = document.getElementById('col').value; // 행값 변수 선언
+            var row = document.getElementById('row').value; // 열값 변수 선언
+            var x = 0; // 배열 x 초기값
+            var y = 0; // 배열 y 초기값
+            var count = 0; // 초기값 number 변수
+            var arr = []; // 1차 배열
+            var dir = 'right'; // 최초 이동 방향
+            // 두 개의 값을 입력했을 때
+            if (col && row != '') {
+                for (var i = 0; i < col; i++) {
+                    arr[i] = []; // 2차 배열
+                    for (var j = 0; j < row; j++) {
+                        arr[i][j] = '*'; // 임시값(*) 입력
+                    }
+                }
+                // 배열 위치 루프
+                while (arr[x][y] == '*' && count < col * row) {
+                    arr[x][y] = '<span style="display: inline-block; width: 40px; height: 40px; border: 1px solid #ddd; font-size: 16px; text-align: center; line-height: 20px;">' + count + '</span>';
+                    count++;
+                    if (dir == 'right') {
+                        if (arr[x][y + 1] == '*') {
+                            y++;
+                        }
+                        else {
+                            dir = 'down';
+                            x++;
+                        }
+                    }
+                    else if (dir == 'down') {
+                        if (arr[x + 1] && arr[x + 1][y] == '*') {
+                            x++;
+                        }
+                        else {
+                            dir = 'left';
+                            y--;
+                        }
+                    }
+                    else if (dir == 'left') {
+                        if (arr[x][y - 1] == '*') {
+                            y--;
+                        }
+                        else {
+                            dir = 'up';
+                            x--;
+                        }
+                    }
+                    else {
+                        if (arr[x - 1] && arr[x - 1][y] == '*') {
+                            x--;
+                        }
+                        else {
+                            dir = 'right';
+                            y++;
+                        }
+                    }
+                }
+                // 출력
+                for (var i = 0; i < col; i++) {
+                    for (var j = 0; j < row; j++) {
+                        document.write(arr[i][j]);
+                    }
+                    document.write('<br>');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

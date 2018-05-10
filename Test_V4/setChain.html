@@ -1,0 +1,37 @@
+<html><body>
+    <script>
+        const parentObj = {
+            showHealth () {
+                console.log('오늘의 운동 시간: ' + this.healthTime);
+            },
+
+            setHealth (newTime) {
+                this.healthTime = newTime;
+            }
+        }
+
+        console.log(parentObj); // 1
+
+        const childObj = {
+            getAge () {
+                return this.age;
+            }
+        }
+
+        console.log(Object.setPrototypeOf(childObj, parentObj));
+        // childObj에 프로토타입으로 parentObj 집어넣음. 상속?
+
+        const grandObj = Object.setPrototypeOf({
+            age: 20
+        }, childObj);
+        //동일하게 grandObj에 childObj 집어넣음
+        //두 개 싹다 받아옴. getAge / setHealth, showHealth
+
+        console.log(grandObj);
+
+        grandObj.setHealth(10);
+        grandObj.showHealth();
+
+        console.log(parentObj);
+    </script>
+</body></html>

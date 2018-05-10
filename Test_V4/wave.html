@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            body, html {
+              height: 100%;
+              width: 100%;
+              text-align: center;
+              background: #202020;
+            overflow: hidden;
+            }
+
+            h3 {
+              font-family: sans-serif;
+              color: #ff5a77;
+            }
+
+            .icon {
+              position: relative;
+              display: block;
+              margin: 0 auto;
+              width: 200px;
+              height: 200px;
+              background-color: pink;
+              border-radius: 50%;
+              overflow: hidden;
+            }
+            .icon:before, .icon:after {
+              content: "";
+              display: block;
+              width: 300%;
+              height: 300%;
+              position: absolute;
+              top: 60%;
+              left: -100%;
+              background-color: rgba(255, 255, 255, 0.5);
+              border-radius: 40% 45%;
+              animation: wave 3.5s linear infinite;
+            }
+            .icon:after {
+              background-color: rgba(255, 255, 255, 0.5);
+              animation: wave 5s linear infinite;
+            }
+
+            @keyframes wave {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <h3>WAVE</h3>
+        <div class="icon"></div>
+    </body>
+</html>
