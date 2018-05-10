@@ -1,0 +1,43 @@
+<html><body>
+  <script>
+    class Fish {
+      constructor (name, width, height) {
+        this.name = name;
+        this.width = width;
+        this.height = height;
+      }
+
+      getName () {
+        return `이름은 ${this.name} 입니다!`;
+      }
+
+      getFull () {
+        return `모든 정보: ${this.name} - ${this.width} - ${this.height}`;
+      }
+    }
+
+    class KingFisher extends Fish {
+      constructor (name, width, height, birth, friend) {
+        super(name, width, height);
+        this.birth = birth;
+        this.friend = friend;
+      }
+
+      getParentsInfo () {
+        return `부모꺼 가져오기! ${super.getFull()}`;
+      }
+
+      getMyown () {
+        return `내꺼 - ${this.birth} - ${this.friend}`;
+      }
+    }
+
+    const fish = new Fish('가물치', '10cm', '20cm');
+    console.log(fish.getFull());
+
+    const king = new KingFisher('나비고기', '20cm', '35cm', '11/22', '윤재');
+    console.log(king.getFull());
+    console.log(king.getParentsInfo());
+    console.log(king.getMyown());
+  </script>
+</body></html>

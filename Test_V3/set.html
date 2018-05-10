@@ -1,0 +1,14 @@
+<html><body>
+  <script>
+    let arr = ['키위', '바나나', '사과'];
+    let arr2 = ['키위', '딸기', '수박'];
+    
+    let set = new Set(arr);
+    let set2 = new Set(arr2);
+
+    console.log(set, set2);
+
+    let result = new Set([...arr.values(), ...arr2.values()].filter(v => !set2.has(v)));
+    console.log(result);
+  </script>
+</body></html>
