@@ -1,0 +1,24 @@
+<html>
+    <head>
+        
+        <style>
+            label{
+                display:block;
+                border:4px solid #88a;
+                box-shadow:1px 1px 3px rgba(0,0,0,0.3) inset;
+                border-radius: 10%;
+                width:1em;
+                height:1em;
+            }
+            
+            input:checked + label{
+                background-color:rgba(0,255,0,0.8);
+                box-shadow:0 0 2px rgba(0,0,0,0.1) inset;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="chk"><input type="checkbox" id="check"></label>
+    </body>
+</html>

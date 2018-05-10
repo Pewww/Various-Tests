@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <input type="checkbox" class="checks">
+        <script type="text/javascript">
+            let checks = document.getElementsByClassName('checks');
+            let cnt = 0;
+            Array.from(checks).forEach((elem, index) => {
+                elem.addEventListener('click', () => {
+                    console.log(cnt + "check!");
+                    cnt++;
+                }) 
+            });
+        </script>
+    </body>
+</html>

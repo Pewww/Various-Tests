@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            var ul = document.createElement('ul');
+            document.body.appendChild(ul);
+            
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            
+            function hide(e){
+                e.target.style.visibility = "hidden";
+            }
+            
+            ul.addEventListener('click', hide, false);
+        </script>
+    </body>
+</html>

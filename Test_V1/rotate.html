@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            html, body{
+                width:100%;
+                height:100%;
+                margin:0;
+                padding:0;
+                overflow:hidden;
+            }
+            
+            *{
+                margin:0;
+                padding:0;
+                border:0;
+                outline:none;
+                box-sizing:border-box;
+            }
+            
+            #container{
+                width:15rem;
+                height:15rem;
+                border:1px solid gray;
+                margin:2rem;
+                overflow:hidden;
+            }
+            
+            #shape{
+                width:45%;
+                height:45%;
+                background-color:plum;
+                /*border-radius: 100%;*/
+                transform:rotate(45deg);
+                margin:-1rem;
+            }
+            
+            #shape:hover{
+                animation-name:shape;
+                animation-duration:2s;
+                animation-fill-mode: forwards;
+            }
+            
+            @keyframes shape{
+                from{
+                    background-color:plum;
+                }
+                to{
+                    background:linear-gradient(to right bottom, red, purple);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "container">
+            <div id = "shape">
+                
+            </div>
+        </div>
+    </body>
+</html>

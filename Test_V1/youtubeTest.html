@@ -1,0 +1,39 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script type = "text/javascript">
+            function checkUrl(url){
+                let tag = "";
+                if(url){
+                    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+                    let matches = url.match(regExp);
+                    if(matches){
+                        tag += "Youtube Id : " + matches[7];
+                    }
+                    
+                    return tag;
+                }
+            }
+            
+            let s1 = "https://www.youtube.com/watch?v=pAWk-yh2ysc";
+            let s2 = "https://youtu.be/WUzwkGmnAaw";
+            let s3 = "https://www.youtube.com/watch?v=z7o07YxmJ48";
+            let s4 = "https://www.youtube.com/watch?v=WUzwkGmnAaw&feature=youtu.be";
+            let s5 = "https://youtu.be/0xabJq2TQLk";
+            
+            document.write(checkUrl(s1));
+            document.write("<br />");
+            document.write(checkUrl(s2));
+            document.write("<br />");
+            document.write(checkUrl(s3));
+            document.write("<br />");
+            document.write(checkUrl(s4));
+            document.write("<br />");
+            document.write(checkUrl(s5));
+            
+            // concat - https://youtu.be/, url ID
+        </script>
+    </body>
+</html>

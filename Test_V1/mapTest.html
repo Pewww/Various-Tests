@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+
+        <script type="text/javascript">
+            var test = "";
+            var inputs = document.querySelectorAll('input');
+            var soo = Array.from(inputs).forEach((elem) => {
+                console.log(elem.value);
+                test += elem.value;
+            });
+            console.log(test);
+            var test2 = test;
+            console.log(test2);
+            var arr = new Array(3);
+            arr[0] = "1";
+            arr[1] = "2";
+            arr[2] = test2;
+            console.log(arr);
+            var test3 = arr.join(' + ');
+            console.log(test3);
+            console.log(test3.split(' + ').reverse());
+        </script>
+    </body>
+</html>
