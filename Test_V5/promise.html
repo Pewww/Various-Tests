@@ -1,0 +1,25 @@
+<html><body>
+  <script>
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const num = Math.floor(Math.random() * 20) + 1;
+        const numValid = num % 2;
+
+        if (numValid) {
+          resolve(num);
+        } else {
+          reject(num);
+        }
+      }, 1000);
+    });
+
+    promise.then(num => {
+      console.log('홀수: ' + num);
+    }).catch(num => {
+      console.log('짝수: ' + num);
+    });
+
+    console.log('20까지의 랜덤 숫자 중 홀수 / 짝수?');
+    console.log('결과는 1초후에!!');
+  </script>
+</body></html>
