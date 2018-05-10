@@ -1,0 +1,24 @@
+<html><body>
+    <script>
+        function checkNum(arg) {
+            const args = Array.prototype.slice.call(arg);
+            console.log(toString.call(args));
+            const result = args.every((v) => typeof v === "number");
+
+            return result;
+        }
+
+        let arr = [1, 2, 3, 4, 5, "hello"];
+
+        console.log(checkNum(arr));
+
+        function checkRest(...args) {
+            console.log(toString.call(args));
+            const result = args.every((v) => typeof v === "number");
+
+            return result;
+        }
+
+        console.log(checkNum(arr));
+    </script>
+</body></html>

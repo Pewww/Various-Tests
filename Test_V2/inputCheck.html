@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Input-Check</title>
+    </head>
+    <body>
+        <script>
+            let myObj = {
+                myFunc: function() {
+                    return 'bar';
+                },
+                hello: function() {
+                    return 'foo';
+                },
+                last: function() {
+                    return 'last function expression'
+                }
+            };
+
+            console.log(myObj.myFunc());
+
+            var foo = function(f) {
+                return f;
+            }
+
+            var bar = foo(function() {console.log('Hi')});
+            bar();
+
+            var bar2 = function() {
+                console.log('Hi');
+            }
+
+            foo(bar2());
+
+            var countDownFrom = function(num) {
+                console.log(num);
+                num--;
+                if(num < 0) {
+                    return false;
+                }
+                countDownFrom(num);
+                // arguments.callee(num); 로 대체 가능
+            }
+
+            countDownFrom(10);
+
+            var checkIt = function(num) {
+                if(num === 1 || num === 2) {
+                    return num;
+                }else {
+                    return checkIt(num - 1) + checkIt(num - 2);
+                }
+            }
+
+            console.log(checkIt(10));
+        </script>
+    </body>
+</html>

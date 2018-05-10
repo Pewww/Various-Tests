@@ -1,0 +1,39 @@
+<html><body>
+    <script>
+        const obj = {
+            name: 'Crong',
+            age: 18
+        };
+
+        const test = [
+            {
+                name: '1'
+            },
+            {
+                hello: '2'
+            },
+            [
+                {
+                    my: '3'
+                },
+                {
+                    lu: '4'
+                }
+            ]
+        ];
+        let {name: dd, hello: ss} = test;
+        console.log(dd, ss);
+
+        const plus = {
+            plus: '+',
+            minus: '-'
+        };
+
+        const compare = Object.assign({}, obj, plus);
+
+        console.log(obj, compare);
+
+        let {name, age} = obj;
+        console.log(name, age);
+    </script>
+</body></html>

@@ -1,0 +1,83 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script type="text/javascript">
+        /*var foo = 'foo';
+                    var myObj = {
+                        foo: 'I am myObject.foo'
+                    };
+                    
+                    var sayFoo = function() {
+                        console.log(this.foo);
+                    }
+                    
+                    myObj.sayFoo = sayFoo;
+                    
+                    console.log(myObj.sayFoo());
+                    console.log(sayFoo());*/
+        /*window.foo = 'foo';
+        window.myObj = {
+            foo: 'I am myObject.foo'
+        };
+            
+        window.sayFoo = function() {
+            console.log(this.foo);
+        };
+            
+        window.myObj.sayFoo = window.sayFoo;
+            
+        window.myObj.sayFoo();
+        window.sayFoo();*/
+        /*var myObj = {
+            func1: function() {
+                console.log(this);
+                var func2 = function() {
+                    console.log(this); //책에는 window 기록
+                    var func3 = function() {
+                        console.log(this); //책에는 window 기록
+                    }();
+                }();
+            }
+        }
+            
+        myObj.func1();*/
+        /*var myObj = {
+            myProp: 'Test Code of this'
+            , myMethod() {
+                var that = this;
+                var helpFunc = function () {
+                    console.log(that.myProp);
+                    console.log('this is window object: ' + this);
+                }();
+            }
+        }
+        myObj.myMethod();
+        var Cody = function () {
+            this.living = true;
+            this.age = 30;
+            this.gender = 'female';
+            this.getGender = function () {
+                return this.gender;
+            };
+        }
+        
+        var cody = new Cody();
+        console.log(cody.getGender())*/
+        this.x = 9;
+        var module = {
+            x: 81,
+            getX: function() {
+                return this.x;
+            }
+        };
+        
+        console.log(module.getX());
+        
+        var getX = module.getX;
+        console.log(getX());
+    </script>
+</body>
+
+</html>

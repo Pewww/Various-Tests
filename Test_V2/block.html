@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            html, body{
+                margin:0;
+            }
+            
+            *{
+                transition:0.5s;
+                cursor: pointer;
+            }
+            
+            #block{
+                position:absolute;
+                left:0;
+                top:0;
+                /*width:200px;*/
+                height:200px;
+                background:Red;
+            }
+            
+            #main{
+                position:absolute;
+                left:0;
+                top:0;
+                width:200px;
+                height:200px;
+                background:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "block"></div>
+        <div id = "main"></div>
+        
+        <script type= "text/javascript">
+            let main = document.getElementById('main');
+            let block = document.getElementById('block');
+            
+            main.onclick = (e) => {
+                block.style.width = '200px';
+                e.target.style.left = '200px';
+            }
+        </script>
+    </body>
+</html>

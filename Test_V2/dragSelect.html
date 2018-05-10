@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <body>
+    <div id="selectme">
+      <p>Some text goes here!</p>
+      <p>Moar text!</p>
+    </div>
+    <p class="click">Click me!</p>
+
+    <script>
+      function selectText (element) {
+        let doc = document
+          , text = doc.getElementById(element)
+          , range, selection;
+        
+        if (doc.body.createTextRange) {
+          range = document.body.createTextRange();
+          range.moveToElementText(text);
+          range.select();
+        } else if (window.getSelection) {
+          selection = window.getSelection();
+          range = document.createRange();
+          range.selectNodeContents(text);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+      }
+
+      document.onclick = (e) => {
+        if (e.target.className === 'click') {
+          selectText('selectme');
+        }
+      }
+    </script>
+  </body>
+</html>

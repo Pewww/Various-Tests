@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        width: 100%;
+        height: 400vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      #box {
+        height: 400px;
+        background-color: #e6e6e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        color: #202020;
+      }
+
+      nav {
+        width: 100%;
+        height: 175px;
+        background-color: #fff;
+        box-shadow: 0 0 3px darkgray;
+        margin-top: 20px;
+      }
+
+      .fixed-position {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"><h1>Test</h1></div>
+    <nav></nav>
+    <script>
+      const box = document.querySelector('nav');
+
+      window.addEventListener('scroll', () => {
+        let scrollHeight = scrollY;
+        if (scrollHeight >= 420) {
+          box.classList.add('fixed-position');
+        } else {
+          box.classList.remove('fixed-position');
+        }
+      })
+    </script>
+  </body>
+</html>

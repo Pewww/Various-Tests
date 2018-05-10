@@ -1,0 +1,30 @@
+<html><body>
+    <script>
+        function celebrityIDCreator(theCelebrities) {
+            let uniqueID = 100;
+            for (var i=0; i<theCelebrities.length; i++) {
+                theCelebrities[i]["id"] = function(j) {
+                    return uniqueID + i;
+                }()
+            }(i);
+            return theCelebrities;
+        }
+        var actionCelebs = [
+            {
+                name:"Stallone",
+                id:0
+            }, 
+            {
+                name:"Cruise",
+                id:0
+            },
+            {
+                name:"Willis",
+                id:0
+            }
+        ];
+        var createIdForActionCelebs = celebrityIDCreator(actionCelebs);
+        var stalloneID = createIdForActionCelebs[0];
+        console.log(stalloneID.id); // 103
+    </script>
+</body></html>

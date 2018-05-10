@@ -1,0 +1,15 @@
+<html><body>
+    <script>
+        let dest = {
+            name: 'l',
+            age: 18,
+            getFunc () {
+                return this.age;
+            }
+        };
+
+        let {name: haho, getFunc} = dest;
+
+        console.log(haho, getFunc);
+    </script>
+</body></html>

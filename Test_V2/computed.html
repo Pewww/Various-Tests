@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            #elem{
+                position:absolute;
+                left:100px;
+                top:200px;
+                height:200px;
+                background-color:palegreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="elem"></div>
+        <div id="output"></div>
+        
+        <script type="text/javascript">
+            function getStyle(){
+                let elem = document.getElementById('elem');
+                let prop = window.getComputedStyle(elem, null).getPropertyValue("height");
+                alert(prop);
+            }
+            getStyle();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html><head></head><body>
+    <script>
+        let arr = [1, 2, 3, 4, 5, null, "Cre"];
+        let arr2 = ['start', ...arr, 'finish'];
+
+        console.log(arr2);
+
+        function args(num, num2, num3) {
+            return Array(...arguments);
+        }
+
+        let num = [1, 2, 3];
+        console.log(args(...num));
+
+        let news = [
+            {
+                "title" : "sbs",
+                "imgUrl" : "https://www.naver.com",
+                "newsList" : [
+                    "기사 첫째",
+                    "기사 메인내용",
+                    "기사 메인내용2",
+                    "기사 서브 내용",
+                    "기사 마무리"
+                ]
+            },
+            {
+                "title" : "mbc",
+                "imgUrl" : "https://www.daum.net",
+                "newsList" : [
+                    "기사 첫째1",
+                    "기사 메인내용2",
+                    "기사 메인내용2_2",
+                    "기사 서브 내용2",
+                    "기사 마무리2"
+                ]
+            }
+        ];
+
+        /*let [,mbc] = news;
+        let {title, imgUrl} = mbc;
+        console.log(title, imgUrl);*/
+
+        let [, {title, imgUrl}] = news;
+        console.log(title, imgUrl);
+
+
+        let arrData = ["crong", "honux", "jk", "jinny"];
+        let myname = arrData[0];
+        let jung = arrData[2];
+
+        let [one,,two] = arrData;
+
+        console.log(one, two);
+
+        function eArr() {
+            let li = document.querySelectorAll('li');
+            let newArr = Array.from(li).filter((v) => {
+                return v.innerText.includes('e');
+            });
+
+            return newArr;
+        }
+
+        let objEx = {
+            name: 'Caden',
+            age: 17,
+            address: 'YongIn',
+            ageData () {
+                return this.age;
+            }
+        };
+
+        let {name,lele} = objEx;
+
+        console.log(name, lele);
+
+        let test2 = objEx;
+        console.log(test2.ageData());
+
+        function upToFive(arr) {
+            let result = arr.filter((v) => {
+                return v > 5;
+            });
+
+            return result;
+        }
+
+        console.log(upToFive([1, 2, 3, 4, 5, 6, 7]))
+    </script>
+</body></html>

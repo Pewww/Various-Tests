@@ -1,0 +1,25 @@
+<html><body>
+    <script>
+        const setting = {
+            name: 'LUCKY LOTTO!',
+            count: 6,
+            maxNumber: 45
+        };
+
+        const {count, maxNumber} = setting;
+        const ws = new WeakSet();
+
+        function getRandomNumber(maxNumber) {
+            this.maxNumber = maxNumber;
+            let randNum = Math.floor((Math.random() * this.maxNumber) + 1);
+
+            ws.add({randNum});
+        };
+
+        for(let i = 0; i < count; i++) {
+            getRandomNumber(maxNumber);
+        }
+
+        console.log(ws);
+    </script>
+</body></html>

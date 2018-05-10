@@ -1,0 +1,33 @@
+<html><body>
+    <script>
+        export function log(data) {
+            console.log(data);
+        }
+
+        export const getTime = () => {
+            return Date.now();
+        }
+
+        export class Test {
+            constructor(props) {
+                this.lectures = ['hello', 'world'];
+            }
+
+            getLectures() {
+                return this.lectures;
+            }
+
+            getTime() {
+                return Data.now();
+            }
+        }
+
+        export const _ = {
+            log(data) {
+                if(window.console) console.log(data);
+            }
+        }
+
+        import {Test} from './imex.html'
+    </script>
+</body></html>

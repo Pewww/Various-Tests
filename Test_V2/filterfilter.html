@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <ul>
+            <li>apple</li>
+            <li>pine</li>
+            <li>cherry</li>
+            <li>kiwi</li>
+            <li>banana</li>
+            <li>orange</li>
+            <li>lemon</li>
+            <li>grape</li>
+            <li>strawberry</li>
+            <li>mango</li>
+        </ul>
+        <script>
+            function printLetterA() {
+                let li = [...document.querySelectorAll('ul > li')];
+                let result = li.filter(e => e.innerText.includes('a'));
+
+                return result;
+            }
+
+            console.log(printLetterA());
+            
+        </script>
+    </body>
+</html>

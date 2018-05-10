@@ -1,0 +1,30 @@
+<html><head>
+    <body>
+        <script>
+            function getObj() {
+                let name = "Hello";
+
+                let getName = function() {
+                    return name;
+                }
+
+                let setName = function(newName) {
+                    name = newName;
+                } 
+
+                let printName = function() {
+                    console.log(name);
+                }
+
+                return {
+                    getName,
+                    setName
+                }
+            }
+
+            let objTest = getObj();
+            objTest.setName("Change");
+            console.log(objTest.getName());
+        </script>
+    </body>
+</head></html>
