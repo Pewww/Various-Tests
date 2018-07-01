@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Did Thanos Kill You?</title>
+    <meta name="description" content="Did Thanos kill you?">
+    <meta name="keywords" content="did,Thanos,kill,me,you,avengers,infinity,war,half,fifty,50,percent,snap">
+    <meta name="author" content="Tristan Bellman-Greenwood">
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      #display {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4em;
+        text-align: center;
+      }
+
+      button {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12rem;
+        height: 2.8rem;
+        border-radius: 50px;
+        background-color: #666666;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body onload="onLoad()">
+    <div style="width: 100%; height: 100%;">
+      <span id="display"></span>
+      <button onclick="clearCookie()">CLEAR</button>
+    </div>
+    <script>
+      function getCookie (cname) {
+        let name = cname + '=';
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+
+        for (let val in ca) {
+          let c = val;
+          console.log(c);
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return '';
+      }
+            
+      function onLoad() {
+        let displayElement = document.getElementById('display');
+        let randomNumber = getCookie('thanosNumber');
+        const displayText = [
+          'You were slain by Thanos, for the good of the Universe.',
+          'You were spared by Thanos'
+        ];
+          
+        if (!randomNumber) {
+          randomNumber = Math.random();
+          document.cookie = `ThanosNumber = ${randomNumber}; expires=Fri, 3 May 2019 00:00:00 UTC`;
+        } else {
+          randomNumber = Number(randomNumber);
+        }
+
+        displayElement.textContent = randomNumber < 0.5 ? displayText[0] : displayText[1];
+        console.log(document.cookie);
+      }
+        
+      function clearCookie() {
+        document.cookie = 'ThanosNumber=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

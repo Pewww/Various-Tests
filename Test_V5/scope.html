@@ -1,0 +1,15 @@
+<html><body>
+  <script>
+    function scope (val) {
+      if (val > 5) {
+        var b = 3;
+        c = 7;
+      }
+
+      console.log(b);
+    }
+
+    scope(7);
+    console.log(c);
+  </script>
+</body></html>

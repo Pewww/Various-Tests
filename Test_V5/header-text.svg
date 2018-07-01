@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 406">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:#263c5e;font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700}.cls-1{font-size:42px}.cls-2{fill:none;stroke:#51627e;stroke-width:3px}.cls-3{font-size:34px}.cls-4{font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR;font-weight:400}
+        </style>
+    </defs>
+    <g id="Text" transform="translate(-140 -338)">
+        <text id="선린인터넷고등학교_멀티미디어과_졸업작품전시회" class="cls-1" data-name="선린인터넷고등학교 멀티미디어과 졸업작품전시회" transform="translate(140 387)">
+            <tspan x="0" y="0">선린인터넷고등학교 멀티미디어과</tspan><tspan x="0" y="70">졸업작품전시회</tspan>
+        </text>
+        <path id="line" d="M0 0h332" class="cls-2" transform="translate(140 522.5)"/>
+        <text id="SUNRIN_INTERNET_HIGHSCHOOL_DEPARTMENT_OF_MULTIMEDIA_GRADUATION_EXHIBITION" class="cls-3" data-name="SUNRIN INTERNET HIGHSCHOOL DEPARTMENT OF MULTIMEDIA GRADUATION EXHIBITION" transform="translate(140 613)">
+            <tspan x="0" y="0">SUNRIN INTERNET HIGHSCHOOL</tspan><tspan class="cls-4"><tspan x="0" y="60">DEPARTMENT OF MULTIMEDIA</tspan><tspan x="0" y="120">GRADUATION EXHIBITION</tspan></tspan>
+        </text>
+    </g>
+</svg>

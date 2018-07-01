@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            let body = document.body;
+            let arr = [
+                ['□', '□', '□', '■', '□'],
+                ['□', '□', '□', '■', '■'],
+                ['□', '□', '□', '■', '□'],
+                ['□', '□', '□', '■', '□'],
+                ['□', '□', '□', '■', '□']
+            ];
+            
+            // 기본 출력
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    document.write(arr[i][j]);
+                }
+                document.write('<br>');
+            }
+            
+            document.write('<br><br><br>');
+            
+            // 90도 회전
+            for (let i = 0; i < arr.length; i++) {
+                for (j = arr.length - 1; j >= 0; j--) {
+                    document.write(arr[j][i]);
+                }
+                document.write('<br>');
+            }
+        </script>
+    </body>
+</html>
